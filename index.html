@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width" />
+  <title>Mars</title>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__content">
+    <div class="container">
+      <div class="header__content-inner">
+        <div class="header__logo">
+          <a href="#">
+            <img src="img/logo.png" alt="">
+          </a>
+          <div class="header__phone">
+            <img src="img/icon/phone.png" alt="">
+            <a href="tel:+380667735197" class="header__number">+380667735197</a>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="button">BUY NOV</div>
+          <div class="burger">
+            <img src="img/icon/menu.png" alt="menu">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<div class="main">
+  <div class="container">
+    <div class="main__content">
+
+      <div class="span-block">
+        <div class="span-block-point active"></div>
+        <div class="span-block-point"></div>
+        <div class="span-block-point"></div>
+      </div>
+
+      <div class="main__text">
+        <div class="main__title">PHANTOM</div>
+        <div class="main__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget euismod dolor.</div>
+      </div>
+      <div class="main__text">
+        <div class="main__title">MAVIC</div>
+        <div class="main__subtitle">Lorem ipsum dolor sit amet. Quisque eget euismod dolor.</div>
+      </div>
+      <div class="main__text">
+        <div class="main__title">PHANTOM 4</div>
+        <div class="main__subtitle">Consectetur adipiscing elit. Quisque eget euismod dolor.</div>
+      </div>
+
+      <div class="main__white-block">
+        <ul class="slides">
+          <li class="slide">
+            <img src="img/dron.png" alt="" class="dron">
+          </li>
+          <li class="slide">
+            <img src="img/inspire.png" alt="" class="dron">
+          </li>
+          <li class="slide">
+            <img src="img/kvadrokopter.png" alt="" class="dron">
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+    <div class="scroll-down">Schroll down</div>
+  </div>
+
+</div>
+<!--BLOCK2-->
+<div class="three-blocks">
+  <div class="three-block__one">
+    <div class="one__title">Tap to fly</div>
+    <div class="one__subtitle">Lorem ipsum dolor sit amet</div>
+  </div>
+
+  <div class="three-block__two">
+    <div class="black-block">
+      <div class="two__title">Fly higher than before</div>
+    </div>
+    <div class="button__block">
+      <div class="button">VIEW MORE</div>
+    </div>
+  </div>
+</div>
+<!--/BLOCK2-->
+<!--BLOCK3-->
+
+<div class="features">
+  <div class="container">
+    <div class="features__title">Features</div>
+    <div class="services">
+      <div class="services__card">
+        <img src="img/icon/easy.png" alt="">
+        <div class="services__description">New Technology</div>
+      </div>
+      <div class="services__card">
+        <img src="img/icon/signal.png" alt="">
+        <div class="services__description">Good signal</div>
+      </div>
+      <div class="services__card">
+        <img src="img/icon/technology.png" alt="">
+        <div class="services__description">Easy to use</div>
+      </div>
+      <div class="services__card">
+        <img src="img/icon/visibility.png" alt="">
+        <div class="services__description">Visibility</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--/BLOCK3-->
+<!--BLOCK4-->
+<div class="generation">
+  <video class="generation_one" controls autoplay muted loop id="myVideo">
+    <source src="video/videoplayback.mp4" type="video/mp4">
+  </video>
+  <div class="generation_two">
+    <div class="generation__title">New <span>generation</span> <br> of vision <span>.</span> </div>
+    <img src="img/icon/icon_134.png" alt="">
+  </div>
+</div>
+<!--/BLOCK4-->
+<div class="products">
+  <div class="container">
+    <div class="products__title">New <span>generation</span> <br> of vision <span>.</span> </div>
+
+    <div class="products__button">PRODUCTS</div>
+    <img src="img/dron.png" alt="" class="products__image">
+  </div>
+</div>
+
+<div class="water">
+  <div class="water__title">Start your journey.</div>
+  <div class="water__button">VIEW MOWE</div>
+</div>
+
+<footer class="footer">
+  <img src="img/logo.png" alt="" class="footer__logo">
+  <div class="footer__title">2020 Copyright. All rights reserved by <a href="#">EVGENIY ALESHIN</a></div>
+</footer>
+
+<script>
+		let sliderImages = document.querySelectorAll('.slide'),
+				point = document.querySelectorAll('.span-block-point'),
+		    text = document.querySelectorAll('.main__text');
+
+		var index = 0;
+
+		showSlides();
+		function showSlides() {
+				var i;
+
+				for (i = 0; i < sliderImages.length; i++){
+
+						point[i].className = ('span-block-point');
+						sliderImages[i].style.opacity = 0;
+						text[i].style.display = 'none';
+
+
+
+				}
+
+				index = index + 1;
+				if (index > sliderImages.length){
+						index = 1;
+
+				}
+
+				point[index - 1].className = ('span-block-point active');
+				sliderImages[index - 1].style.opacity = 1 ;
+				text[index - 1].style.display = 'block';
+
+				setTimeout(showSlides, 6000 );
+
+
+		}
+
+
+</script>
+</body>
+</html>
